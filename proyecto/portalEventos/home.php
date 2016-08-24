@@ -1,14 +1,18 @@
 <?php 
 //se incluye las propuiedades de conexion
-include('./ini/conexion.ini.php');
-
+require_once('./ini/configuracion.ini.php');
+require_once('./ini/conexion.ini.php');
 $conexion=conectarBD();
 ?>
 <html>
 <head>
-<title>Portal Eventos - Appio</title>
+	<title>Portal Eventos - Appio</title>
 </head>
+
 <body>
+
+	este es el home, la data de este archivo se ce en home.php <br><br>
+	
 	<?php 
 		/* comprobar la conexion del servidor */
 		if (mysql_ping($conexion)) 
@@ -19,4 +23,6 @@ $conexion=conectarBD();
 		desconectarBD($conexion);
 	?>
 </body>
+
+
 </html>
